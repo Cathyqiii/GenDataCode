@@ -1,0 +1,18 @@
+timeVAE:
+  latent_dim: 8
+  hidden_layer_sizes:
+    - 16
+    - 32
+    - 64
+  use_residual_conn: true
+  trend_poly: 0
+  custom_seas: null
+
+  reconstruction_wt: 10.0
+  kl_weight: 0.01
+  time_loss_weight: 2.0
+  focal_gamma: 2.0
+
+  batch_size: 16
+  max_epochs: 200
+  lr: 1e-4
