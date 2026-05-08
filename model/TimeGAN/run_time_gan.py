@@ -1,5 +1,5 @@
-"""Reimplement TimeGAN-pytorch Codebase.
-（最终稳定版：100%无报错 + 反归一化 + 序列对齐 + 全数据集兼容）
+"""TimeGAN-pytorch Codebase.
+（最终纯净版：无反归一化 + 维度100%匹配 + 适配下游预测）
 """
 from __future__ import absolute_import
 from __future__ import division
@@ -19,7 +19,7 @@ import numpy as np
 import os as _os
 
 from config_loader import ConfigLoader
-from TSlib.lib.dataloader import real_data_loading, inverse_MinMaxScaler
+from TSlib.lib.dataloader import real_data_loading
 from lib.timegan import TimeGAN
 
 # ===================== feature 映射 =====================
@@ -35,29 +35,29 @@ feature_map = {
 
 def train():
     # ARGUMENTS
-    _script_dir = _os.path.dirname(_os.path.abspath(__file__))
+    _script_dir = _os.path.dirname(os.path.abspath(__file__))
     _config_dir = os.path.join(_script_dir, "config")
 
     # 遍历数据集
-    for data_name in ['AirQuality(bj)','AirQuality(Italian)']:
+    for data_name in ['FD001']:
         if data_name in []:
             continue
 
         # 加载配置文件
         if data_name in ['ETTh1']:
-            opt = ConfigLoader(_os.path.join(_config_dir, "etth1.conf"))
+            opt = ConfigLoader(os.path.join(_config_dir, "etth1.conf"))
         elif data_name in ['ETTh2']:
-            opt = ConfigLoader(_os.path.join(_config_dir, "etth2.conf"))
+            opt = ConfigLoader(os.path.join(_config_dir, "etth2.conf"))
         elif data_name == 'AirQuality(bj)':
-            opt = ConfigLoader(_os.path.join(_config_dir, "AirQuality(bj).conf"))
+            opt = ConfigLoader(os.path.join(_config_dir, "AirQuality(bj).conf"))
         elif data_name == 'AirQuality(Italian)':
-            opt = ConfigLoader(_os.path.join(_config_dir, "AirQuality(Italian).conf"))
+            opt = ConfigLoader(os.path.join(_config_dir, "AirQuality(Italian).conf"))
         elif data_name == 'Traffic':
-            opt = ConfigLoader(_os.path.join(_config_dir, "Traffic.conf"))
+            opt = ConfigLoader(os.path.join(_config_dir, "Traffic.conf"))
         elif data_name == "FD001":
-            opt = ConfigLoader(_os.path.join(_config_dir, "FD001.conf"))
+            opt = ConfigLoader(os.path.join(_config_dir, "FD001.conf"))
         else:
-            opt = ConfigLoader(_os.path.join(_config_dir, "etth1.conf"))
+            opt = ConfigLoader(os.path.join(_config_dir, "etth1.conf"))
 
         print(f"[{data_name}] 开始加载数据集...")
 
@@ -67,9 +67,8 @@ def train():
         # 调用加载函数
         train_data, val_data, test_data, train_data_g = real_data_loading(data_name, feature)
 
-        # 使用训练数据作为 TimeGAN 输入
-        ori_data_norm = train_data
-
+        # ===================== ✅ 关键修复：直接用全部维度，不丢特征 =====================
+        ori_data_norm = train_data_g
         print(f"[{data_name}] 数据集加载完成，数据形状: {ori_data_norm.shape}")
 
         # LOAD MODEL
@@ -79,11 +78,10 @@ def train():
         print("[INFO] 开始训练 TimeGAN...")
         model.train()
 
-        # ===================== 核心修复：生成数据直接转numpy数组 =====================
-        # 第一步就把列表转数组，杜绝所有list.shape报错
+        # ===================== 生成数据后处理（仅格式+长度对齐） =====================
         synthetic_data_norm = np.array(model.generated_data)
 
-        # 统一生成序列长度，与输入对齐
+        # 统一序列长度，不修改特征维度
         max_seq_len = model.max_seq_len
         synthetic_data_arr = []
         for seq in synthetic_data_norm:
@@ -97,21 +95,14 @@ def train():
         synthetic_data_arr = np.array(synthetic_data_arr)
         print(f"[{data_name}] 生成数据形状: {synthetic_data_arr.shape}")
 
-        # ================== 反归一化 ==================
-        print(f"\n[{data_name}] 进行反归一化...")
-        synthetic_data_denorm = inverse_MinMaxScaler(synthetic_data_arr, data_name)
+        # ===================== 输出路径 =====================
+        _output_dir = os.path.join(_script_dir, "output", data_name)
+        os.makedirs(_output_dir, exist_ok=True)
 
-        print(f"[{data_name}] 反归一化前范围: [{synthetic_data_arr.min():.6f}, {synthetic_data_arr.max():.6f}]")
-        print(f"[{data_name}] 反归一化后范围: [{synthetic_data_denorm.min():.6f}, {synthetic_data_denorm.max():.6f}]")
-        print(f"[{data_name}] 原始数据范围: [{ori_data_norm.min():.6f}, {ori_data_norm.max():.6f}]")
+        save_path = os.path.join(_output_dir, f"{data_name}.npy")
+        np.save(save_path, synthetic_data_arr)
 
-        # 保存
-        save_path = os.path.join(opt.OUTPUT_DIR, f"{data_name}_synthetic_final.npy")
-        os.makedirs(opt.OUTPUT_DIR, exist_ok=True)
-        np.save(save_path, synthetic_data_denorm)
-
-        # 无报错打印
-        print(f"\n✅ [{data_name}] 训练完成！已保存: {synthetic_data_denorm.shape}")
+        print(f"\n✅ [{data_name}] 训练完成！已保存: {synthetic_data_arr.shape}")
         print(f"✅ 保存路径: {save_path}")
 
 if __name__ == "__main__":
