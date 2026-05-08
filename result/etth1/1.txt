@@ -1,0 +1,145 @@
+D:\Anaconda\envs\GenDataCode\python.exe D:\GenDataCode_2\model\CTD_Mamba_Diff\run.py
+[DATASET] 使用的数据集:etth1
+
+[DEBUG DATA] 开始加载数据
+[INFO] 训练数据形状: (43, 108, 1)
+[DEBUG] 真实训练数据 ori_data | shape=(43, 108, 1) | min=0.171342 | max=0.566015 | mean=0.399888 | std=0.069165
+✅ 条件构建完成 | 数据集: etth1 | 条件形状: (43, 108, 6)
+[INFO] 条件数据形状: torch.Size([43, 108, 6])
+[DEBUG] 条件数据 | shape=(43, 108, 6) | min=0.000000 | max=1.000000 | mean=0.420110 | std=0.262615
+Loaded VAE checkpoint from D:\GenDataCode_2\model\CTD_Mamba_Diff\lib\VAE/checkpoints/ETTh1_seq_condition_vae.pth
+
+[INFO] 开始训练 CTD_Mamba_Diff 模型...
+[Epoch 1/300] loss = 0.375820
+[Epoch 2/300] loss = 0.188856
+[Epoch 3/300] loss = 0.191478
+[Epoch 4/300] loss = 0.141883
+[Epoch 5/300] loss = 0.148988
+[Epoch 6/300] loss = 0.123116
+[Epoch 7/300] loss = 0.063180
+[Epoch 8/300] loss = 0.126274
+[Epoch 9/300] loss = 0.124447
+[Epoch 10/300] loss = 0.104239
+[Epoch 11/300] loss = 0.147416
+[Epoch 12/300] loss = 0.122515
+[Epoch 13/300] loss = 0.095879
+[Epoch 14/300] loss = 0.097070
+[Epoch 15/300] loss = 0.098199
+[Epoch 16/300] loss = 0.065977
+[Epoch 17/300] loss = 0.083763
+[Epoch 18/300] loss = 0.097618
+[Epoch 19/300] loss = 0.083253
+[Epoch 20/300] loss = 0.069331
+[Epoch 21/300] loss = 0.078283
+[Epoch 22/300] loss = 0.064556
+[Epoch 23/300] loss = 0.054328
+[Epoch 24/300] loss = 0.090089
+[Epoch 25/300] loss = 0.083024
+[Epoch 26/300] loss = 0.057763
+[Epoch 27/300] loss = 0.056449
+[Epoch 28/300] loss = 0.109439
+[Epoch 29/300] loss = 0.064347
+[Epoch 30/300] loss = 0.079367
+[Epoch 31/300] loss = 0.096139
+[Epoch 32/300] loss = 0.056686
+[Epoch 33/300] loss = 0.075884
+[Epoch 34/300] loss = 0.043596
+[Epoch 35/300] loss = 0.072756
+[Epoch 36/300] loss = 0.091276
+[Epoch 37/300] loss = 0.076002
+[Epoch 38/300] loss = 0.086154
+[Epoch 39/300] loss = 0.095228
+[Epoch 40/300] loss = 0.054002
+[Epoch 41/300] loss = 0.092999
+[Epoch 42/300] loss = 0.045741
+[Epoch 43/300] loss = 0.136110
+[Epoch 44/300] loss = 0.069997
+[Epoch 45/300] loss = 0.072340
+[Epoch 46/300] loss = 0.072418
+[Epoch 47/300] loss = 0.040935
+[Epoch 48/300] loss = 0.067397
+[Epoch 49/300] loss = 0.056303
+[Epoch 50/300] loss = 0.047073
+[Epoch 51/300] loss = 0.064270
+[Epoch 52/300] loss = 0.078380
+[Epoch 53/300] loss = 0.041768
+[Epoch 54/300] loss = 0.096083
+[Epoch 55/300] loss = 0.050142
+[Epoch 56/300] loss = 0.064064
+[Epoch 57/300] loss = 0.110947
+[Epoch 58/300] loss = 0.047205
+[Epoch 59/300] loss = 0.057926
+[Epoch 60/300] loss = 0.041536
+[Epoch 61/300] loss = 0.052839
+[Epoch 62/300] loss = 0.064248
+[Epoch 63/300] loss = 0.037931
+[Epoch 64/300] loss = 0.116550
+[Epoch 65/300] loss = 0.039400
+[Epoch 66/300] loss = 0.023189
+[Epoch 67/300] loss = 0.035718
+[Epoch 68/300] loss = 0.074719
+[Epoch 69/300] loss = 0.038315
+[Epoch 70/300] loss = 0.017412
+[Epoch 71/300] loss = 0.034388
+[Epoch 72/300] loss = 0.018344
+[Epoch 73/300] loss = 0.015098
+[Epoch 74/300] loss = 0.066169
+[Epoch 75/300] loss = 0.029693
+[Epoch 76/300] loss = 0.057144
+[Epoch 77/300] loss = 0.029673
+[Epoch 78/300] loss = 0.051789
+[Epoch 79/300] loss = 0.053060
+[Epoch 80/300] loss = 0.057834
+[Epoch 81/300] loss = 0.032260
+[Epoch 82/300] loss = 0.070979
+[Epoch 83/300] loss = 0.051927
+[Epoch 84/300] loss = 0.071722
+[Epoch 85/300] loss = 0.019997
+[Epoch 86/300] loss = 0.055053
+[Epoch 87/300] loss = 0.045140
+[Epoch 88/300] loss = 0.026586
+[Epoch 89/300] loss = 0.031327
+[Epoch 90/300] loss = 0.065368
+[Epoch 91/300] loss = 0.039710
+[Epoch 92/300] loss = 0.039403
+[Epoch 93/300] loss = 0.049426
+[Epoch 94/300] loss = 0.051771
+[Epoch 95/300] loss = 0.045380
+[Epoch 96/300] loss = 0.097436
+[Epoch 97/300] loss = 0.034431
+[Epoch 98/300] loss = 0.085858
+[Epoch 99/300] loss = 0.045219
+[Epoch 100/300] loss = 0.026235
+[Epoch 101/300] loss = 0.032634
+[Epoch 102/300] loss = 0.031263
+[Epoch 103/300] loss = 0.040268
+Early stopping triggered.
+
+[INFO] 开始生成合成数据...
+[INFO] 生成第 1/3 批数据...
+[INFO] 生成第 2/3 批数据...
+[INFO] 生成第 3/3 批数据...
+[INFO] 生成数据范围: [0.171342, 0.566015]
+[INFO] 原始数据范围: [0.171342, 0.566015]
+
+[INFO] 合成数据保存至: ./output/etth1\etth1.npy
+[INFO] 合成数据形状: (129, 108, 1)
+[INFO] 全流程执行完成！
+
+============================================================
+📊 生成数据质量全面检测报告
+============================================================
+
+【1. 基础信息检查】
+真实数据 shape: (43, 108, 1)
+生成数据 shape: (129, 108, 1)
+Wasserstein距离: 0.0275（越小越好）
+时序自相关差异: 0.5717（<0.1 优秀）
+DTW距离: 4.6896（越小越好）
+
+【5. 质量评分（时序专用）】
+综合评分: 2/4 | 🟡 合格质量，微调生成噪声即可提升
+
+【6. 时序可视化对比】
+
+进程已结束，退出代码为 0

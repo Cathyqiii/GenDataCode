@@ -1,0 +1,103 @@
+D:\Anaconda\envs\GenDataCode\python.exe D:\GenDataCode_2\model\CTD_Mamba_Diff\run2.py
+[DATASET] 使用的数据集:Traffic
+
+[DEBUG DATA] 开始加载数据
+[INFO] 训练数据形状: (1011, 108, 1)
+[DEBUG] 真实训练数据 ori_data | shape=(1011, 108, 1) | min=0.000137 | max=1.000000 | mean=0.444147 | std=0.272252
+✅ 条件构建完成 | 数据集: Traffic | 条件形状: (1011, 108, 7)
+[INFO] 条件数据形状: torch.Size([1011, 108, 7])
+[DEBUG] 条件数据 | shape=(1011, 108, 7) | min=0.000000 | max=1.000000 | mean=0.142857 | std=0.349927
+
+[INFO] 开始训练 CTD_Mamba_Diff 模型...
+[Epoch 1/300] loss = 0.324747
+[Epoch 2/300] loss = 0.177635
+[Epoch 3/300] loss = 0.160425
+[Epoch 4/300] loss = 0.144979
+[Epoch 5/300] loss = 0.140315
+[Epoch 6/300] loss = 0.144545
+[Epoch 7/300] loss = 0.127637
+[Epoch 8/300] loss = 0.133834
+[Epoch 9/300] loss = 0.127977
+[Epoch 10/300] loss = 0.119138
+[Epoch 11/300] loss = 0.134516
+[Epoch 12/300] loss = 0.121385
+[Epoch 13/300] loss = 0.134799
+[Epoch 14/300] loss = 0.120507
+[Epoch 15/300] loss = 0.120313
+[Epoch 16/300] loss = 0.122354
+[Epoch 17/300] loss = 0.122817
+[Epoch 18/300] loss = 0.121542
+[Epoch 19/300] loss = 0.117412
+[Epoch 20/300] loss = 0.113513
+[Epoch 21/300] loss = 0.118382
+[Epoch 22/300] loss = 0.128713
+[Epoch 23/300] loss = 0.124407
+[Epoch 24/300] loss = 0.123652
+[Epoch 25/300] loss = 0.122228
+[Epoch 26/300] loss = 0.114601
+[Epoch 27/300] loss = 0.115589
+[Epoch 28/300] loss = 0.113182
+[Epoch 29/300] loss = 0.114065
+[Epoch 30/300] loss = 0.129338
+[Epoch 31/300] loss = 0.129535
+[Epoch 32/300] loss = 0.107465
+[Epoch 33/300] loss = 0.121168
+[Epoch 34/300] loss = 0.121916
+[Epoch 35/300] loss = 0.116425
+[Epoch 36/300] loss = 0.118168
+[Epoch 37/300] loss = 0.112123
+[Epoch 38/300] loss = 0.122526
+[Epoch 39/300] loss = 0.123822
+[Epoch 40/300] loss = 0.110147
+[Epoch 41/300] loss = 0.116096
+[Epoch 42/300] loss = 0.123212
+[Epoch 43/300] loss = 0.108713
+[Epoch 44/300] loss = 0.118054
+[Epoch 45/300] loss = 0.113571
+[Epoch 46/300] loss = 0.118543
+[Epoch 47/300] loss = 0.118682
+[Epoch 48/300] loss = 0.120591
+[Epoch 49/300] loss = 0.122710
+[Epoch 50/300] loss = 0.107918
+[Epoch 51/300] loss = 0.110374
+[Epoch 52/300] loss = 0.108871
+[Epoch 53/300] loss = 0.109631
+[Epoch 54/300] loss = 0.117529
+[Epoch 55/300] loss = 0.108320
+[Epoch 56/300] loss = 0.116624
+[Epoch 57/300] loss = 0.121345
+[Epoch 58/300] loss = 0.116635
+[Epoch 59/300] loss = 0.114346
+[Epoch 60/300] loss = 0.119077
+[Epoch 61/300] loss = 0.119124
+[Epoch 62/300] loss = 0.113105
+Early stopping triggered.
+
+[INFO] 开始生成合成数据...
+[INFO] 生成第 1/3 批数据...
+[INFO] 生成第 2/3 批数据...
+[INFO] 生成第 3/3 批数据...
+[INFO] 生成数据范围: [0.000137, 1.000000]
+[INFO] 原始数据范围: [0.000137, 1.000000]
+
+[INFO] 合成数据保存至: ./output/Traffic\Traffic.npy
+[INFO] 合成数据形状: (3033, 108, 1)
+[INFO] 全流程执行完成！
+
+============================================================
+📊 生成数据质量全面检测报告
+============================================================
+
+【1. 基础信息检查】
+真实数据 shape: (1011, 108, 1)
+生成数据 shape: (3033, 108, 1)
+Wasserstein距离: 0.0352（越小越好）
+时序自相关差异: 0.0648（<0.1 优秀）
+DTW距离: 23.1004（越小越好）
+
+【5. 质量评分（时序专用）】
+综合评分: 2/4 | 🟡 合格质量，微调生成噪声即可提升
+
+【6. 时序可视化对比】
+
+进程已结束，退出代码为 0

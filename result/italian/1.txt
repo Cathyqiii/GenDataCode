@@ -1,0 +1,195 @@
+D:\Anaconda\envs\GenDataCode\python.exe D:\GenDataCode_2\model\CTD_Mamba_Diff\run2.py
+[DATASET] 使用的数据集:AirQuality(Italian)
+
+[DEBUG DATA] 开始加载数据
+[INFO] 训练数据形状: (53, 108, 8)
+[DEBUG] 真实训练数据 ori_data | shape=(53, 108, 8) | min=0.000000 | max=1.000000 | mean=0.288680 | std=0.180159
+✅ 条件构建完成 | 数据集: AirQuality(Italian) | 条件形状: (53, 108, 4)
+[INFO] 条件数据形状: torch.Size([53, 108, 4])
+[DEBUG] 条件数据 | shape=(53, 108, 4) | min=0.000000 | max=1.000000 | mean=0.465573 | std=0.271194
+Loaded VAE checkpoint from D:\GenDataCode_2\model\CTD_Mamba_Diff\lib\VAE/checkpoints/AirQuality(Italian)_seq_condition_vae.pth
+
+[INFO] 开始训练 CTD_Mamba_Diff 模型...
+[Epoch 1/300] loss = 1.059473
+[Epoch 2/300] loss = 0.935468
+[Epoch 3/300] loss = 0.850601
+[Epoch 4/300] loss = 0.777801
+[Epoch 5/300] loss = 0.672860
+[Epoch 6/300] loss = 0.616180
+[Epoch 7/300] loss = 0.532596
+[Epoch 8/300] loss = 0.504873
+[Epoch 9/300] loss = 0.455165
+[Epoch 10/300] loss = 0.449270
+[Epoch 11/300] loss = 0.417436
+[Epoch 12/300] loss = 0.376240
+[Epoch 13/300] loss = 0.356290
+[Epoch 14/300] loss = 0.319042
+[Epoch 15/300] loss = 0.337090
+[Epoch 16/300] loss = 0.218394
+[Epoch 17/300] loss = 0.254616
+[Epoch 18/300] loss = 0.235441
+[Epoch 19/300] loss = 0.230918
+[Epoch 20/300] loss = 0.210986
+[Epoch 21/300] loss = 0.162384
+[Epoch 22/300] loss = 0.194003
+[Epoch 23/300] loss = 0.189391
+[Epoch 24/300] loss = 0.171448
+[Epoch 25/300] loss = 0.166284
+[Epoch 26/300] loss = 0.164366
+[Epoch 27/300] loss = 0.153397
+[Epoch 28/300] loss = 0.133648
+[Epoch 29/300] loss = 0.149044
+[Epoch 30/300] loss = 0.107448
+[Epoch 31/300] loss = 0.126763
+[Epoch 32/300] loss = 0.109094
+[Epoch 33/300] loss = 0.127805
+[Epoch 34/300] loss = 0.114365
+[Epoch 35/300] loss = 0.099907
+[Epoch 36/300] loss = 0.077003
+[Epoch 37/300] loss = 0.103183
+[Epoch 38/300] loss = 0.104308
+[Epoch 39/300] loss = 0.130134
+[Epoch 40/300] loss = 0.093914
+[Epoch 41/300] loss = 0.080305
+[Epoch 42/300] loss = 0.088906
+[Epoch 43/300] loss = 0.087240
+[Epoch 44/300] loss = 0.043513
+[Epoch 45/300] loss = 0.066443
+[Epoch 46/300] loss = 0.073668
+[Epoch 47/300] loss = 0.069597
+[Epoch 48/300] loss = 0.051526
+[Epoch 49/300] loss = 0.057448
+[Epoch 50/300] loss = 0.063110
+[Epoch 51/300] loss = 0.103532
+[Epoch 52/300] loss = 0.067513
+[Epoch 53/300] loss = 0.088391
+[Epoch 54/300] loss = 0.057237
+[Epoch 55/300] loss = 0.042255
+[Epoch 56/300] loss = 0.070960
+[Epoch 57/300] loss = 0.076532
+[Epoch 58/300] loss = 0.050775
+[Epoch 59/300] loss = 0.080546
+[Epoch 60/300] loss = 0.047491
+[Epoch 61/300] loss = 0.066553
+[Epoch 62/300] loss = 0.067620
+[Epoch 63/300] loss = 0.056515
+[Epoch 64/300] loss = 0.070602
+[Epoch 65/300] loss = 0.086265
+[Epoch 66/300] loss = 0.051635
+[Epoch 67/300] loss = 0.035076
+[Epoch 68/300] loss = 0.054235
+[Epoch 69/300] loss = 0.063183
+[Epoch 70/300] loss = 0.090351
+[Epoch 71/300] loss = 0.062174
+[Epoch 72/300] loss = 0.049177
+[Epoch 73/300] loss = 0.072126
+[Epoch 74/300] loss = 0.061526
+[Epoch 75/300] loss = 0.044092
+[Epoch 76/300] loss = 0.071216
+[Epoch 77/300] loss = 0.042525
+[Epoch 78/300] loss = 0.084144
+[Epoch 79/300] loss = 0.054240
+[Epoch 80/300] loss = 0.060343
+[Epoch 81/300] loss = 0.042625
+[Epoch 82/300] loss = 0.035699
+[Epoch 83/300] loss = 0.076632
+[Epoch 84/300] loss = 0.049746
+[Epoch 85/300] loss = 0.056825
+[Epoch 86/300] loss = 0.125301
+[Epoch 87/300] loss = 0.053559
+[Epoch 88/300] loss = 0.055052
+[Epoch 89/300] loss = 0.064249
+[Epoch 90/300] loss = 0.043679
+[Epoch 91/300] loss = 0.025811
+[Epoch 92/300] loss = 0.066658
+[Epoch 93/300] loss = 0.059232
+[Epoch 94/300] loss = 0.032869
+[Epoch 95/300] loss = 0.032309
+[Epoch 96/300] loss = 0.048136
+[Epoch 97/300] loss = 0.044458
+[Epoch 98/300] loss = 0.038732
+[Epoch 99/300] loss = 0.073366
+[Epoch 100/300] loss = 0.035542
+[Epoch 101/300] loss = 0.043632
+[Epoch 102/300] loss = 0.037113
+[Epoch 103/300] loss = 0.059137
+[Epoch 104/300] loss = 0.049717
+[Epoch 105/300] loss = 0.082115
+[Epoch 106/300] loss = 0.030318
+[Epoch 107/300] loss = 0.027453
+[Epoch 108/300] loss = 0.056011
+[Epoch 109/300] loss = 0.064896
+[Epoch 110/300] loss = 0.052994
+[Epoch 111/300] loss = 0.052749
+[Epoch 112/300] loss = 0.047776
+[Epoch 113/300] loss = 0.037173
+[Epoch 114/300] loss = 0.039165
+[Epoch 115/300] loss = 0.046092
+[Epoch 116/300] loss = 0.042812
+[Epoch 117/300] loss = 0.023852
+[Epoch 118/300] loss = 0.062366
+[Epoch 119/300] loss = 0.105986
+[Epoch 120/300] loss = 0.056334
+[Epoch 121/300] loss = 0.033585
+[Epoch 122/300] loss = 0.039013
+[Epoch 123/300] loss = 0.079220
+[Epoch 124/300] loss = 0.039788
+[Epoch 125/300] loss = 0.068523
+[Epoch 126/300] loss = 0.017632
+[Epoch 127/300] loss = 0.044534
+[Epoch 128/300] loss = 0.050422
+[Epoch 129/300] loss = 0.074382
+[Epoch 130/300] loss = 0.023330
+[Epoch 131/300] loss = 0.045024
+[Epoch 132/300] loss = 0.045915
+[Epoch 133/300] loss = 0.035840
+[Epoch 134/300] loss = 0.046015
+[Epoch 135/300] loss = 0.041220
+[Epoch 136/300] loss = 0.049277
+[Epoch 137/300] loss = 0.042867
+[Epoch 138/300] loss = 0.033459
+[Epoch 139/300] loss = 0.046488
+[Epoch 140/300] loss = 0.047596
+[Epoch 141/300] loss = 0.042258
+[Epoch 142/300] loss = 0.071317
+[Epoch 143/300] loss = 0.049951
+[Epoch 144/300] loss = 0.079538
+[Epoch 145/300] loss = 0.034377
+[Epoch 146/300] loss = 0.039012
+[Epoch 147/300] loss = 0.027745
+[Epoch 148/300] loss = 0.044138
+[Epoch 149/300] loss = 0.036429
+[Epoch 150/300] loss = 0.064222
+[Epoch 151/300] loss = 0.048340
+[Epoch 152/300] loss = 0.029515
+[Epoch 153/300] loss = 0.097173
+[Epoch 154/300] loss = 0.019647
+[Epoch 155/300] loss = 0.068630
+[Epoch 156/300] loss = 0.023985
+Early stopping triggered.
+
+[INFO] 开始生成合成数据...
+[INFO] 生成第 1/2 批数据...
+[INFO] 生成第 2/2 批数据...
+[INFO] 生成数据范围: [0.000000, 1.000000]
+[INFO] 原始数据范围: [0.000000, 1.000000]
+
+[INFO] 合成数据保存至: ./output/AirQuality(Italian)\AirQuality(Italian).npy
+[INFO] 合成数据形状: (106, 108, 8)
+[INFO] 全流程执行完成！
+
+============================================================
+📊 生成数据质量全面检测报告
+============================================================
+
+【1. 基础信息检查】
+真实数据 shape: (53, 108, 8)
+生成数据 shape: (106, 108, 8)
+Wasserstein距离: 0.0166（越小越好）
+时序自相关差异: 0.0601（<0.1 优秀）
+DTW距离: 7.8678（越小越好）
+
+【5. 质量评分（时序专用）】
+综合评分: 3/4 | 🟢 优秀质量，满足科研/工程要求
+
+【6. 时序可视化对比】
