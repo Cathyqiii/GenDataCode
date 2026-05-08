@@ -1,0 +1,2 @@
+,dataset,MAE,RMSE,MAPE,steps,bestModel
+0,etth2,1.6066575050354004,1.8166788816452026,2.9118285179138184,33,./experiments/best_model_FEDformer_etth2_12_1776131427.1682498.pth

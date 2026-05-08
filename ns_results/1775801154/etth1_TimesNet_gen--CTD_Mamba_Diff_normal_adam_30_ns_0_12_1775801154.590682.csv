@@ -1,0 +1,2 @@
+,dataset,MAE,RMSE,MAPE,steps,bestModel
+0,etth1,0.020853983238339424,0.028808584436774254,0.10001267492771149,63,./experiments/best_model_TimesNet_etth1_12_1775801451.1168668.pth

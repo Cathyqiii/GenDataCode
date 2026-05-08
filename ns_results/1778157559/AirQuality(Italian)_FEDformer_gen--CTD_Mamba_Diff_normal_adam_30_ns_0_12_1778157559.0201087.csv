@@ -1,0 +1,4 @@
+,dataset,MAE,RMSE,MAPE,steps,bestModel
+0,AirQuality(Italian),0.11153998225927353,0.13744068145751953,1.1773264408111572,81,./experiments/best_model_FEDformer_AirQuality(Italian)_12_1778161623.0411167.pth
+0,AirQuality(Italian),0.09572072327136993,0.13179133832454681,0.6929196715354919,122,./experiments/best_model_FEDformer_AirQuality(Italian)_12_1778172522.2707033.pth
+0,AirQuality(Italian),0.10330044478178024,0.13949665427207947,0.8454601168632507,200,./experiments/best_model_FEDformer_AirQuality(Italian)_12_1778180211.135312.pth

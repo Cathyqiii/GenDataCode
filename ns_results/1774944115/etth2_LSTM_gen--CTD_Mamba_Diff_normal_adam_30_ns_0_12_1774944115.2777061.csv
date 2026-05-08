@@ -1,0 +1,2 @@
+,dataset,MAE,RMSE,MAPE,steps,bestModel
+0,etth2,,,,31,./experiments/best_model_LSTM_etth2_12_1774944145.0905933.pth

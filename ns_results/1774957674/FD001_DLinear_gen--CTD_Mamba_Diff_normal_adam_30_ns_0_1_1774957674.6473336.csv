@@ -1,0 +1,4 @@
+,dataset,MAE,RMSE,MAPE,steps,bestModel
+0,FD001,,,,31,./experiments/best_model_DLinear_FD001_1_1774957772.607418.pth
+0,FD001,,,,31,./experiments/best_model_DLinear_FD001_1_1774957872.2281914.pth
+0,FD001,,,,31,./experiments/best_model_DLinear_FD001_1_1774957957.22887.pth

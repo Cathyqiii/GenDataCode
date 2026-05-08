@@ -1,0 +1,4 @@
+,dataset,MAE,RMSE,MAPE,steps,bestModel
+0,AirQuality(bj),0.04310532286763191,0.06040068343281746,2.0656580924987793,60,./experiments/best_model_TimesNet_AirQuality(bj)_12_1778166560.184701.pth
+0,AirQuality(bj),0.04374825954437256,0.06153813749551773,1.9770593643188477,48,./experiments/best_model_TimesNet_AirQuality(bj)_12_1778173284.9922512.pth
+0,AirQuality(bj),0.042617082595825195,0.06000642850995064,1.9721086025238037,51,./experiments/best_model_TimesNet_AirQuality(bj)_12_1778182951.120622.pth

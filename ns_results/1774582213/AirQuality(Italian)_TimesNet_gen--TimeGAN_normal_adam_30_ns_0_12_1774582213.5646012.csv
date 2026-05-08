@@ -1,0 +1,2 @@
+,dataset,MAE,RMSE,MAPE,steps,bestModel
+0,AirQuality(Italian),0.07357113808393478,0.10349754244089127,0.3935355246067047,75,./experiments/best_model_TimesNet_AirQuality(Italian)_12_1774582389.6408277.pth

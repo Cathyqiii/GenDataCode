@@ -1,0 +1,2 @@
+,dataset,MAE,RMSE,MAPE,steps,bestModel
+0,AirQuality(Italian),,,,31,./experiments/best_model_LSTM_AirQuality(Italian)_12_1774946351.3259969.pth

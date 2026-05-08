@@ -1,0 +1,2 @@
+,dataset,MAE,RMSE,MAPE,steps,bestModel
+0,AirQuality(bj),,,,31,./experiments/best_model_LSTM_AirQuality(bj)_12_1774946343.4273605.pth
